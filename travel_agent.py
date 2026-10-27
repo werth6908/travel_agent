@@ -33,7 +33,7 @@ def check_input(state: TravelState):
     if len(destination) > 50:
         return {"result": "目的地名称不能超过 50 个字符"}
 
-    # bool 在 Python 中属于 int 的子类，因此单独排除
+  
     if isinstance(days, bool) or not isinstance(days, int):
         return {"result": "旅行天数必须是整数"}
 
@@ -74,7 +74,7 @@ def search_attractions(state: TravelState):
                 "attractions": [],
             }
 
-        # 提取后续规划真正需要的信息
+        
         attractions = []
 
         for place in data.get("pois", []):
