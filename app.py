@@ -1,8 +1,8 @@
 import streamlit as st
-from travel_agent import build_graph  # 换成你实际的文件名
+from travel_agent import build_graph 
 
 st.set_page_config(page_title="旅游助手", page_icon="🧳")
-st.title("🧳 旅游助手")
+st.title(" 🧳旅游助手")
 
 @st.cache_resource
 def get_graph():
@@ -43,11 +43,11 @@ if submitted:
             })
 
         # 一、显示行程结果
-        st.subheader("🗓️ 旅游行程")
+        st.subheader(" 旅游行程")
         st.markdown(result.get("result", "暂无行程结果"))
 
         # 二、显示高德搜索到的景点
-        st.subheader("📍 高德地图景点")
+        st.subheader(" 高德地图景点")
 
         attractions = result.get("attractions", [])
 
@@ -62,7 +62,7 @@ if submitted:
             st.info("本次没有获取到景点数据。")
 
         # 三、显示高德返回的驾车路线参考
-        st.subheader("🚗 景点间驾车路线参考")
+        st.subheader(" 景点间驾车路线参考")
 
         routes = result.get("routes", [])
 
